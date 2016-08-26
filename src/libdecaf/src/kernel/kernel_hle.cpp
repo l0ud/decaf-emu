@@ -8,6 +8,7 @@
 #include "modules/dmae/dmae.h"
 #include "modules/erreula/erreula.h"
 #include "modules/gx2/gx2.h"
+#include "modules/h264/h264.h"
 #include "modules/mic/mic.h"
 #include "modules/nn_ac/nn_ac.h"
 #include "modules/nn_acp/nn_acp.h"
@@ -133,6 +134,7 @@ initialiseHleMmodules()
    dmae::Module::RegisterFunctions();
    nn::erreula::Module::RegisterFunctions();
    gx2::Module::RegisterFunctions();
+   h264::Module::RegisterFunctions();
    mic::Module::RegisterFunctions();
    nn::ac::Module::RegisterFunctions();
    nn::acp::Module::RegisterFunctions();
@@ -157,6 +159,7 @@ initialiseHleMmodules()
    registerHleModule("dmae.rpl", new dmae::Module{});
    registerHleModule("erreula.rpl", new nn::erreula::Module{});
    registerHleModule("gx2.rpl", new gx2::Module{});
+   registerHleModule("h264.rpl", new h264::Module{});
    registerHleModule("mic.rpl", new mic::Module{});
    registerHleModule("nn_ac.rpl", new nn::ac::Module{});
    registerHleModule("nn_acp.rpl", new nn::acp::Module{});
